@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="June Alliswell Calendar is a private, non-public personal calendar integration service for Alliswell that accesses Google Calendar strictly on a local environment via Tailscale."
+    />
+    <meta name="robots" content="index,follow" />
+    <title>June Alliswell Calendar</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="June Alliswell Calendar home">
+        <span class="brand-mark" aria-hidden="true">A</span>
+        <span>June Alliswell Calendar</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#google-data">Google data</a>
+        <a href="./privacy.html">Privacy</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <div class="eyebrow">Private personal application</div>
+        <h1 id="page-title">Personal calendar records,<br />kept private.</h1>
+        <p class="lead">
+          June Alliswell Calendar helps its owner manage personal schedules and
+          calendar events by integrating Google Calendar with Alliswell in a
+          private setup.
+        </p>
+
+        <div class="private-notice" role="note">
+          <strong>Private-use notice</strong>
+          <p>
+            This application is used solely by its owner for a private personal
+            project (Alliswell). The actual service runs only on the owner's
+            local environment and private Tailscale network, and is never
+            exposed or offered to external users. This public page exists only
+            to provide Google OAuth application information and privacy
+            disclosures.
+          </p>
+          <p lang="ko">
+            이 애플리케이션(Alliswell 캘린더 연동)은 소유자 개인의 프라이빗
+            프로젝트를 위해서만 사용됩니다. 실제 서비스는 소유자의 로컬 환경 및
+            테일스케일(Tailscale) 기반의 비공개 내부 네트워크에서만 운영되며,
+            외부에 전혀 공개되지 않고 제3자에게 제공되지 않습니다. 이 공개
+            페이지는 Google OAuth 앱 정보와 개인정보 처리 내용을 안내하기
+            위해서만 제공됩니다.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="about" aria-labelledby="about-title">
+        <div class="section-heading">
+          <span>01</span>
+          <div>
+            <p class="kicker">Purpose</p>
+            <h2 id="about-title">What the application does</h2>
+          </div>
+        </div>
+        <div class="content-grid">
+          <article class="info-card">
+            <h3>Syncs personal calendar</h3>
+            <p>
+              It connects to the owner's Google Calendar account to view and
+              synchronize personal schedules, events, and agenda items within
+              Alliswell.
+            </p>
+          </article>
+          <article class="info-card">
+            <h3>Local &amp; Tailscale private hosting</h3>
+            <p>
+              The service runs strictly on the owner's local machine and secure
+              Tailscale private network. Calendar data remains completely within
+              the owner's self-managed environment.
+            </p>
+          </article>
+          <article class="info-card">
+            <h3>Remains non-public</h3>
+            <p>
+              There is no public sign-up, no service offered to third parties,
+              and no public access to the owner's calendar or personal
+              information.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section
+        class="section data-section"
+        id="google-data"
+        aria-labelledby="data-title"
+      >
+        <div class="section-heading">
+          <span>02</span>
+          <div>
+            <p class="kicker">Google user data</p>
+            <h2 id="data-title">Limited, private access</h2>
+          </div>
+        </div>
+        <div class="permission-panel">
+          <div>
+            <p class="permission-label">Requested permissions</p>
+            <code>https://www.googleapis.com/auth/calendar.readonly</code><br />
+            <code>https://www.googleapis.com/auth/calendar.events</code>
+          </div>
+          <p>
+            The application uses these permissions only to view and synchronize
+            calendar events needed for personal schedule management in
+            Alliswell. It operates exclusively within the owner's private local
+            environment via Tailscale. Google user data is not sold, used for
+            advertising, or shared with third parties.
+          </p>
+        </div>
+        <a class="text-link" href="./privacy.html">
+          Read the full Privacy Policy <span aria-hidden="true">→</span>
+        </a>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 June Alliswell Calendar</p>
+      <div>
+        <a href="./privacy.html">Privacy Policy</a>
+        <a href="./terms.html">Terms of Service</a>
+      </div>
+    </footer>
+  </body>
+</html>
