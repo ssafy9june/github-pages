@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="June 개인 프로젝트의 앱 소개, 개인정보처리방침, 이용약관을 한곳에서 확인하세요."
+    />
+    <title>June — 프로젝트 안내</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #18231f;
+        --muted: #62706a;
+        --paper: #f4f1e9;
+        --surface: #fffdf8;
+        --accent: #1e5f74;
+        --line: #d8ded8;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at 90% 8%, #d9a44120, transparent 25rem),
+          var(--paper);
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.7;
+        word-break: keep-all;
+        overflow-wrap: anywhere;
+      }
+
+      a { color: inherit; text-underline-offset: 0.25em; }
+      a:focus-visible { outline: 3px solid #d9a441; outline-offset: 5px; }
+
+      .site-header, main, footer {
+        width: min(calc(100% - 2.5rem), 1080px);
+        margin-inline: auto;
+      }
+
+      .site-header {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        min-height: 5.5rem;
+        border-bottom: 1px solid var(--line);
+        font-weight: 750;
+      }
+
+      .brand-mark, .project-mark {
+        display: grid;
+        flex-shrink: 0;
+        place-items: center;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        color: white;
+        background: var(--accent);
+        font-family: Georgia, "Times New Roman", serif;
+      }
+
+      .hero { padding: 5rem 0 3rem; }
+      .eyebrow {
+        margin: 0 0 1rem;
+        color: var(--accent);
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.14em;
+      }
+
+      h1 {
+        margin: 0 0 1.25rem;
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        line-height: 1.25;
+        letter-spacing: -0.05em;
+      }
+
+      .lead { max-width: 42rem; margin: 0; color: var(--muted); font-size: 1.08rem; }
+      .project-count { margin: 0 0 1rem; color: var(--muted); font-size: 0.88rem; }
+
+      .project-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1rem;
+        padding-bottom: 5rem;
+      }
+
+      .project {
+        display: flex;
+        flex-direction: column;
+        padding: 1.75rem;
+        border: 1px solid var(--line);
+        border-radius: 0.85rem;
+        background: var(--surface);
+      }
+
+      .project-top { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.75rem; }
+      .service { color: var(--muted); font-size: 0.82rem; }
+      h2 { margin: 0 0 0.85rem; font-size: 1.3rem; line-height: 1.4; letter-spacing: -0.025em; }
+      h2 a { text-decoration: none; }
+      h2 a:hover { color: var(--accent); text-decoration: underline; }
+      .description { margin: 0 0 2rem; color: var(--muted); font-size: 0.95rem; }
+
+      .project-links { margin-top: auto; }
+      .home-link { display: inline-block; margin-bottom: 1rem; color: var(--accent); font-weight: 750; }
+      .policy-links { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; font-size: 0.82rem; color: var(--muted); }
+      footer { padding: 1.75rem 0 2.5rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.85rem; }
+
+      @media (max-width: 900px) {
+        .project-grid { grid-template-columns: 1fr; }
+        .project-top { margin-bottom: 1rem; }
+        .description { margin-bottom: 1.5rem; }
+      }
+
+      @media (max-width: 480px) {
+        .hero { padding-top: 3.5rem; }
+        .project { padding: 1.4rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <span class="brand-mark" aria-hidden="true">J</span>
+      <span>June · Application Pages</span>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <p class="eyebrow">PERSONAL PROJECTS</p>
+        <h1 id="page-title">프로젝트 안내 페이지</h1>
+        <p class="lead">
+          각 프로젝트의 앱 소개와 Google OAuth 관련 개인정보처리방침,
+          이용약관을 확인할 수 있습니다.
+        </p>
+      </section>
+
+      <p class="project-count">3개의 프로젝트</p>
+      <section class="project-grid" aria-label="프로젝트 목록">
+        <article class="project" aria-labelledby="expense-title">
+          <div class="project-top">
+            <span class="project-mark" aria-hidden="true">J</span>
+            <span class="service">Gmail</span>
+          </div>
+          <h2 id="expense-title"><a href="./june-expense-tracker/">June Expense Tracker</a></h2>
+          <p class="description">Gmail의 결제 알림 메일을 활용해 개인 지출 내역을 정리하는 프로젝트입니다.</p>
+          <nav class="project-links" aria-label="June Expense Tracker 페이지">
+            <a class="home-link" href="./june-expense-tracker/">앱 소개 <span aria-hidden="true">→</span></a>
+            <div class="policy-links">
+              <a href="./june-expense-tracker/privacy.html">개인정보처리방침</a>
+              <a href="./june-expense-tracker/terms.html">이용약관</a>
+            </div>
+          </nav>
+        </article>
+
+        <article class="project" aria-labelledby="calendar-title">
+          <div class="project-top">
+            <span class="project-mark" aria-hidden="true">A</span>
+            <span class="service">Google Calendar</span>
+          </div>
+          <h2 id="calendar-title"><a href="./june-alliswell-calendar/">June Alliswell Calendar</a></h2>
+          <p class="description">Google Calendar와 Alliswell을 연동해 개인 일정을 관리하는 프로젝트입니다.</p>
+          <nav class="project-links" aria-label="June Alliswell Calendar 페이지">
+            <a class="home-link" href="./june-alliswell-calendar/">앱 소개 <span aria-hidden="true">→</span></a>
+            <div class="policy-links">
+              <a href="./june-alliswell-calendar/privacy.html">개인정보처리방침</a>
+              <a href="./june-alliswell-calendar/terms.html">이용약관</a>
+            </div>
+          </nav>
+        </article>
+
+        <article class="project" aria-labelledby="rclone-title">
+          <div class="project-top">
+            <span class="project-mark" aria-hidden="true">R</span>
+            <span class="service">Google Drive</span>
+          </div>
+          <h2 id="rclone-title"><a href="./rclone-audiobook-june/">rclone-audiobook-june</a></h2>
+          <p class="description">rclone으로 Google Drive의 개인 오디오북 파일을 관리하기 위한 OAuth 프로젝트입니다.</p>
+          <nav class="project-links" aria-label="rclone-audiobook-june 페이지">
+            <a class="home-link" href="./rclone-audiobook-june/">앱 소개 <span aria-hidden="true">→</span></a>
+            <div class="policy-links">
+              <a href="./rclone-audiobook-june/privacy.html">개인정보처리방침</a>
+              <a href="./rclone-audiobook-june/terms.html">이용약관</a>
+            </div>
+          </nav>
+        </article>
+      </section>
+    </main>
+
+    <footer>© 2026 June · 개인 프로젝트 안내</footer>
+  </body>
+</html>
